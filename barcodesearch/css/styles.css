@@ -1,0 +1,144 @@
+
+	/*
+	@mikaelcarrara
+	http://www.mikaelcarrara.com
+	*/
+
+	body {
+		background:#f7f7f7 url(../img/bg.jpg) top left no-repeat;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:16px; color:#98928b;
+		line-height:18px;
+	}
+
+	a {text-decoration:none; color:#eda14c}
+	a:hover {text-decoration:underline}
+
+	h1 {
+		width:500px; height:60px;
+		background:url(../img/barcode.png);
+		margin:40px 0 30px 0;
+		text-indent:-9999px;
+		float:left;
+	}
+
+	h2 {
+		width:100%; height:auto;
+		font-family:"Myriad Pro", sans-serif;
+		margin:25px 0 15px 0;
+		font-size:25px;
+		color:#494949;
+		float:left;
+	}
+
+
+	/* General */
+
+	div#page {
+		width:820px; height:auto;
+		padding:0 40px 0 40px;
+		position:relative;
+		line-height:25px;
+		margin:auto;
+	}
+	
+	div#palmPre {
+		width:263px; height:603px;
+		background:url(../img/palmPre.png) center no-repeat;
+		position:absolute;
+		right:35px; top:40px;
+		z-index:20;
+	}
+	
+	div#gallery {
+		width:200px; height:283px;
+		position:absolute;
+		right:65px; top:113px;
+		z-index:10;
+	}
+	
+	/* ---------------------- */
+	
+	div#content {
+		box-shadow:2px 1px 5px #cedae0; 
+		-moz-box-shadow:2px 1px 5px #cedae0;
+		-webkit-box-shadow:2px 1px 5px #cedae0;
+		-moz-border-radius:20px;
+		-webkit-border-radius:20px;
+		width:750px; height:auto;
+		padding:0 35px 30px 35px;
+		background:#fff;
+		float:left;
+	}
+	
+	div#entry {
+		width:430px; height:auto;
+	}
+	
+	div#entry ul {
+		width:100%; height:auto;
+		margin:0 0 40px 0;
+		float:left;
+	}
+	
+	/* ---------------------- */
+
+	div#buy {
+		margin:20px 290px 65px 0;
+		text-align:right;
+		float:right;
+	}
+	
+	div#buy a#now {
+		width:221px; height:86px;
+		background:url(../img/buyNow.png);
+		text-decoration:-9999px;
+		outline:none;
+		float:right;
+	}
+	
+	div#buy a#now:hover {
+		background-position:0 -86px;
+	}
+	
+	div#buy p {
+		width:200px; height:auto;
+		padding:15px 17px 0 0;
+		float:right;
+	}
+	
+
+	/* Footer */
+
+	div#footer {
+		width:100%; height:auto;
+		background:#98928c;
+		padding:10px 0 5px 0;
+		font-size:15px;
+		color:#e7ddd4;
+		float:left;
+	}
+
+	div#footer a {color:#fff}
+	
+	div#footerInterno {
+		width:820px; height:auto;
+		font-size:14px;
+		margin:auto;
+	}
+	
+	/* ---------------------- */
+	
+	p#copyright {
+		width:500px; height:auto;
+		padding:7px 0 0 0;
+		line-height:23px;
+		text-align:left;
+		float:left;
+	}
+	
+	p#doinLogo {
+		width:200px; height:auto;
+		text-align:right;
+		float:right;
+	}

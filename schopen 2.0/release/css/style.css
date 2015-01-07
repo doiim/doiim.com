@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+	/*
+	@doinapps
+	http://www.doinapps.com
+	*/
+
+	body {
+	}
+	
+	a {}
+	a:hover {}
+
+	h1 {
+	}
+
+	h2 {
+	}
+	
+	h3 {
+	}
+
+
+	/* General */
+
+	div#page {
+	}
+
+	
+	/* Navigation */
+
+	
+	/* Gallery */
+
+	ul#gallery {
+	}
+
+	ul#gallery li {
+	}
+
+
+	/* Forms */
+	
+	ul#formClass {
+	}
+
+	ul#formClass li {
+	}
+
+	ul#formClass li#bot {
+	}
+	
+	ul#formClass li input[type="text"],
+	ul#formClass li textarea {
+	}
+
+
+	/* Validation */
+	
+	ul#formClass li {position:relative}
+
+	form#validationContact label.error {
+	text-shadow:none;
+	background:#eaa741;
+	padding:0 7px 0 7px;
+	font-size:11px;
+	display:inline;
+	position:absolute;
+	color:#000;
+	right:-5px;
+	top:12px;
+	}
