@@ -1,65 +1,117 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns='http://www.w3.org/1999/xhtml' lang='en' xml:lang='en'>
-
+<!DOCTYPE html>
+<html>
 <head>
-
     <meta http-equiv='content-type' content='text/html; charset=utf-8' />
-    <link rel='shortcut icon' type='image/ico' href='favicon.ico' />
-
     <meta name='author' content='Doiim' />
-    <meta name='copyright' content='© 2011 Doiim. All rights reserved' />
+    <meta name='copyright' content='© 2013 Doiim. All rights reserved' />
+    <meta name='description' content='We develop apps that works concisely across the vast majority  of mobile platforms and devices.' />
+    <meta name='keywords' content='Mobile, webOS, Palm, Android, Apple, iPhone, Application, App, Software, Doiim' />
 
-    <meta name='description' content='We have mobile application software in the marketplace of iPhone OS and Palm webOS' />
-    <meta name='keywords' content='Mobile, webOS, Palm, Apple, iPhone, Application, App, Software, Doiim' />
-
+	<link rel='shortcut icon' type='image/ico' href='favicon.ico' />
     <link type='text/css' href='css/rescss.css' rel='stylesheet' media='all' />
     <link type='text/css' href='css/style.css' rel='stylesheet' media='all' />
 	
     <title>Doiim - We Develop Mobile Application Software</title>
-	
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type='text/javascript'>
+    	$(document).ready(function(){
+    		var webos = $("#webos")
+    		var ios = $("#ios")
+    		var webos_apps = $(".webos-apps")
+    		var ios_apps = $(".ios-apps")
+    		var ack = 0;
+    		var clk = 0;
+
+    		webos_apps.hide()
+    		ios_apps.hide()
+
+    		$("#webos, #ios").click(function(){
+    			if($(event.target).attr('id') == "webos" && clk == 0) {
+    				clk = 1;
+    				if(ack == 0 || ack == 1){
+						webos_apps.slideToggle(function() {
+							if(webos_apps.is(":visible")) {
+								ack = 1;
+								ios.animate({ opacity: 0.3 }, "slow")
+								$("html, body").animate({ scrollTop: $(document).height()-720 }, "slow", function(){ clk = 0; })
+			    			}
+			    			else {
+			    				ack = 0;
+			    				ios.animate({ opacity: 1 }, "slow")
+			    				$("html, body").animate({ scrollTop: $(document).height() }, "slow", function(){ clk = 0; })
+			    			}
+		    			})
+					}
+					else{
+						ack = 1;
+						ios_apps.slideToggle(function(){
+							ios.animate({ opacity: 0.3 }, "fast", function(){
+	    						webos.animate({ opacity: 1 }, "fast")
+	    					})
+	    					webos_apps.slideToggle(function(){
+	    						$("html, body").animate({ scrollTop: $(document).height()-720 }, "slow", function(){ clk = 0; })
+	    					})
+						})
+					}
+    			}
+    			else if($(event.target).attr('id') == "ios" && clk == 0) {
+    				clk = 1;
+    				if(ack == 0 || ack == 2){
+						ios_apps.slideToggle(function() {
+							if(ios_apps.is(":visible")) {
+								ack = 2;
+								webos.animate({ opacity: 0.3 }, "slow")
+								$("html, body").animate({ scrollTop: $(document).height()-720 }, "slow", function(){ clk = 0; })
+							}
+							else {
+								ack = 0;
+								webos.animate({ opacity: 1 }, "slow")
+								$("html, body").animate({ scrollTop: $(document).height() }, "slow", function(){ clk = 0; })
+							}
+		    			})
+					}
+					else {
+						ack = 2;
+						webos_apps.slideToggle(function(){
+							webos.animate({ opacity: 0.3 }, "fast", function(){
+	    						ios.animate({ opacity: 1 }, "fast")
+	    					})
+	    					ios_apps.slideToggle(function(){
+	    						$("html, body").animate({ scrollTop: $(document).height()-720 }, "slow", function(){ clk = 0; })
+	    					})
+						})
+					}
+    			}
+    		})
+    	})
+    </script>
 </head>
 
-
 <body>
-	
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 	
-
-
 	<ul id="topbar">
-	  <li><a href="https://twitter.com/doiim" class="twitter-follow-button" data-show-count="false" data-size="small">Follow @doiim</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
-</li>
-	  
-	  <li>contact@doiim.com</li>
-	  <li>+55 (43) 3371-5812</li>
+
+		</li>
+	  	<li>contact@doiim.com</li>
+	  	<li>+55 (43) 3371-5812</li>
 	</ul>
 
 	<div id="page">
-	
 		<div id="header">
-	
-			<h1><img src="logo.png" alt="Doin Apps" /></h1>
+			<h1><img src="logo.png" alt="Doiim Apps" /></h1>
+			<p id="desc">We develop <em>apps</em> that works concisely across the vast majority  of mobile platforms and devices.</p>	
+		</div>
 
-			<p id="desc">
-				We have <em>mobile application software</em> in the marketplace of iPhone OS and Palm webOS
-			</p>
-					
-
-		</div> <!-- /header -->
-
-		<h2><img src="palm.png" alt="WebOS" /></h2>
-
-		<ul class="apps">
+		<h2><center><img src="palm.png" alt="WebOS" id="webos" /><img src="apple.png" alt="iOS" id="ios" /></center></h2>
+		<ul class="apps webos-apps">
 			<li>
 			  <h3>Barcode Search</h3>
 			  <span><a href="http://www.doiim.com/barcodesearch">More Info</a></span>
@@ -138,32 +190,22 @@
 			</li>
 		</ul>
 
-		<h2><img src="apple.png" alt="iPhone OS" /></h2>
-
-		<ul class="apps">
+		<ul class="apps ios-apps">
 		  <li>
 		    <h3>AlarmGame</h3>
 		    <span><a href="http://itunes.apple.com/app/alarmgame/id325346913?mt=8">Buy</a> | <a href="http://www.doiim.com/alarmgame">More Info</a></span>
 		  </li>	
 		</ul>
 		
-<br/>
-<br/>
-<br/>
-
-
-
-
-<center> <div class="fb-like" data-href="http://facebook.com/doiim" data-send="true" data-width="573" data-show-faces="true"></div>	<center>
-
-		<p id="footer">
-			&copy; 2012 Doiim. All Rights Reserved.
-		</p>
-
-	</div> <!-- /page -->
+		<br/><br/><br/>
+		<center><div class="fb-like" data-href="http://facebook.com/doiim" data-send="true" data-width="573" data-show-faces="true"></div><center>
+		<p id="footer">&copy; 2013 Doiim. All Rights Reserved.</p>
+		<a href="https://twitter.com/doiim" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @doiim</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</div>
 	
-	<script type="text/javascript">
 
+	<script type="text/javascript">
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-20292853-1']);
 	  _gaq.push(['_trackPageview']);
