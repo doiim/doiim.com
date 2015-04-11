@@ -1,6 +1,0 @@
-
-    <div id="header">
-
-		
-
-    </div> <!-- /header -->
