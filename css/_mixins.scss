@@ -1,0 +1,117 @@
+// this mixins aim to make media queries more intuitive, followig these references:
+// (1) https://coderwall.com/p/ejuw-q/awesome-media-queries-with-sass-and-content
+// (2) https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+// (3) https://ricostacruz.com/til/css-media-query-breakpoints
+// (4) https://css-tricks.com/logic-in-media-queries
+// (5) https://university.webflow.com/article/intro-to-breakpoints
+//
+// our aproach here is DESKTOP FIRST
+// the default CSS is for desktop devices in a range between 1200px and 1799px
+
+
+@mixin for-big-desktop-and-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-or-less {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-or-less {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin for-mobile-landscape-or-less {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin for-mobile-portrait-or-less {
+    @media (max-width: 479px) {
+        @content;
+    }
+}
+
+// use it for testing the media queries
+
+@mixin media-queries-test {
+    @include for-big-desktop-and-up {
+        background-color: lightblue;
+    }
+
+    @include for-tablet-landscape-or-less {
+        background-color: lightcoral;
+    }
+
+    @include for-tablet-portrait-or-less {
+        background-color: lightseagreen;
+    }
+
+    @include for-mobile-landscape-or-less {
+        background-color: lightyellow;
+    }
+
+    @include for-mobile-portrait-or-less {
+        background-color: lightgray;
+    }
+}
+
+// used to set the grid model for each section of the site
+@mixin grid-model-default {
+    margin: 0;
+    // min-width: 100vw;
+    // min-height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    border: 0 solid $foreground-color;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    // grid-template-rows: repeat(6, auto);
+    grid-gap: 48px;
+    padding: 72px;
+    // grid-auto-rows: min-content;
+    grid-auto-flow: row dense;
+}
+
+// set a grid model for mobile devices only
+
+@mixin grid-model-mobile {
+
+    margin: 0;
+    // min-width: 100vw;
+    min-width: 100%;
+    // min-height: 100vh;
+    // min-height: vh(100);
+    min-height: 100%;
+    box-sizing: border-box;
+    border: 0 solid $foreground-color;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    padding: 40px;
+    grid-auto-flow: row dense;
+
+}
+
+// positioning and layering sections, takes z-index as parameter
+
+@mixin positioning($z) {
+    position: absolute;
+    z-index: $z;
+    top: 0;
+    left: 0;
+}
+
+@function vh($quantity) {
+    @return calc(var(--vh, 1vh) * #{$quantity});
+}

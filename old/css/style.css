@@ -1,0 +1,85 @@
+body {
+	background:#fff url(../images/bg.png) top repeat-x;
+	font-family:'Helvetica Neue', Arial, sans-serif;
+	text-shadow:#fff 0px 1px 0px;
+	font-size:17px;
+	color:#39536b;
+}
+
+div#page {
+	width:600px; height:auto;
+	padding:0 0 60px 0;
+	margin:auto;
+}
+
+div#header {
+	width:600px; height:auto;
+	padding:180px 0 100px 0;
+	font-size:19px;
+	float:left;
+}
+
+h1 {
+	width:130px; height:auto;
+	margin:0 30px 0 0;
+	color:#83ce2b;
+	float:left;
+}
+
+h3 {
+	font-size: 17px;
+}
+
+p#desc {
+	width:440px; height:auto;
+	padding:15px 0 0 0;
+	line-height:30px;
+	margin:0;
+	color:#8eb0c8;
+	float:left;
+}
+
+em {
+	font-weight:bold;
+	font-style:normal;
+	color:#39536b;
+}
+
+a {
+	color:#099dfb;
+	text-decoration:none;
+}
+a:hover {
+	color:#3da0df
+}
+
+h2 {
+	width:600px; height:auto;
+	margin:30px 0 5px 0;
+	float:left;
+}
+
+p#footer {
+	width:600px; height:auto;
+	border-top:1px solid #dde7ef;
+	padding:15px 0 40px 0;
+	margin:30px 0 0 0;
+	text-align:center;
+	font-size:12px;
+	color:#93b4cb;
+	float:left;
+}
+
+#contact{
+	float: left;
+	margin-bottom: 80px;
+}
+#contact a {
+	font-size: 24px;
+}
+#contact h3{
+	color:#93b4cb;
+	font-weight: normal;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
