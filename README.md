@@ -1,6 +1,6 @@
 # To do
 
-- Add stuff to looks nice on social media sharing
+- Add stuff to look nice on social media sharing
 - Add 404 page
 - Add dark theme to match visitor system choice.
 - Add support to use browser's back/forward navigation.
