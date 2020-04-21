@@ -44,6 +44,14 @@ a {
   color: #091311;
 }
 
+a:hover {
+  color: #193630;
+}
+
+img.icon {
+  top: 0.75em;
+}
+
 .no-underline {
   border: none;
 }
