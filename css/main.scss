@@ -117,7 +117,7 @@ dd {
     }
 
     main {
-        grid-column: 2 / 5;
+        grid-column: 2 / 6;
         // grid-row: 1 / 7;
         align-self: center;
 
@@ -136,6 +136,7 @@ dd {
         h1 {
             font-size: $font-size-title-huge;
             margin-bottom: 0.5em;
+            max-width: 25ch;
 
             @include for-tablet-landscape-or-less {
                 font-size: $font-size-title-large;
@@ -150,6 +151,7 @@ dd {
         h2 {
             font-size: $font-size-copy-large;
             font-weight: 400;
+            max-width: 75ch;
         }
     }
 
